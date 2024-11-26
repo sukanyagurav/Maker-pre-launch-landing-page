@@ -11,7 +11,7 @@ const Feature = ({ feature }) => {
           className="w-full h-full object-contain mx-auto"
         />
       </div>
-      <div className="max-w-[250px] text-center md:max-w-[300px] md:text-left">
+      <div className="max-w-[250px] text-center md:max-w-[350px] md:text-left">
         <h2 className="text-lg text-white font-bold">{feature.title}</h2>
         <p className="text-gray-400 mt-4">{feature.description}</p>
       </div>
@@ -21,7 +21,7 @@ const Feature = ({ feature }) => {
 
 const Features = () => {
   return (
-    <section className="flex gap-14 items-center justify-center flex-col lg:flex-row max-w-[1200px] mx-auto my-24 p-4">
+    <section id="features" className="flex gap-14 items-center justify-center flex-col lg:flex-row max-w-[1200px] mx-auto my-24 p-4 features">
       {features.map((feature) => (
         <Feature key={feature.id} feature={feature} />
       ))}

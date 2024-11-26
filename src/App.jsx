@@ -11,14 +11,12 @@ function App() {
       <Hero />
       <main>
         <Features />
-        <Plan/>
-        <CTA/>
+        <Plan />
+        <CTA />
       </main>
-      <footer className="p-8">
-        <p className="text-center text-gray-400">
-          Challenge by Frontend Mentor. Coded by SG.
-        </p>
-         
+      <footer className="p-8 text-white text-center">
+        Challenge by <a href="https://www.frontendmentor.io">Frontend Mentor</a>
+        . Coded by <a href="#none">SG</a>.
       </footer>
     </>
   );
