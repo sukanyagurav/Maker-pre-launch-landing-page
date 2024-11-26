@@ -5,10 +5,10 @@ const Hero = () => {
       <picture className="flex-[0.3]">
         <source
           media="(min-width:900px)"
-          srcset="../../public/images/illustration-hero-left.svg"
+          srcset="/images/illustration-hero-left.svg"
         ></source>
         <img
-          src="../../public/images/illustration-hero-mobile.png"
+          src="/images/illustration-hero-mobile.png"
           alt=""
           className="w-full h-full"
         />
@@ -31,10 +31,10 @@ const Hero = () => {
       <picture className="flex-[0.3]">
         <source
           media="(min-width:900px)"
-          srcset="../../public/images/illustration-hero-right.svg"
+          srcset="/images/illustration-hero-right.svg"
         ></source>
         <img
-          src="../../public/images/illustration-hero-mobile.png"
+          src="/images/illustration-hero-mobile.png"
           alt=""
           className="hidden md:block w-full h-full"
         />
