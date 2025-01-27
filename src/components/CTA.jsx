@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-
+import emailjs from "emailjs-com";
 const CTA = () => {
   const emailRef = useRef();
   const [validateMessage, setMessage] = useState("");
@@ -14,8 +14,24 @@ const CTA = () => {
           /^([a-zA-Z0-9\.-]+)@([a-zA-z0-9-]+)(\.[a-z]{2,18})(\.[a-z]{2,8})?$/
         )
     ) {
-      setMessage({type:"success",message:"Thank you for subscribing!"});
+      
 
+      emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAIL_SERVICE_ID, // Replace with your service ID
+        import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID, // Replace with your template ID
+        {
+          to_email: emailRef.current.value,
+        },
+        import.meta.env.VITE_APP_USER_ID // Replace with your public key
+      )
+      .then((response) => {
+        setMessage({type:"success",message:"Thank you for subscribing!"});
+        emailRef.current.value=''
+      })
+      .catch((error) => {
+        setMessage({type:"error",message:"Error sending email"});
+      });
     } else {
       setMessage({type:"error",message:"Please enter a valid email address"});
     }
