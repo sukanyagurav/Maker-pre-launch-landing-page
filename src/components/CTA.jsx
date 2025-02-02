@@ -23,7 +23,7 @@ const CTA = () => {
         {
           to_email: emailRef.current.value,
         },
-        import.meta.env.VITE_APP_USER_ID // Replace with your public key
+        'ztrMfN88to584VuDR' // Replace with your public key
       )
       .then((response) => {
         setMessage({type:"success",message:"Thank you for subscribing!"});
