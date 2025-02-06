@@ -23,7 +23,7 @@ const CTA = () => {
         {
           to_email: emailRef.current.value,
         },
-        'ztrMfN88to584VuDR' // Replace with your public key
+        import.meta.env.VITE_APP_USER_ID // Replace with your public key
       )
       .then((response) => {
         setMessage({type:"success",message:"Thank you for subscribing!"});
@@ -32,6 +32,7 @@ const CTA = () => {
       .catch((error) => {
         setMessage({type:"error",message:"Error sending email"});
       });
+      // setMessage({type:"success",message:"Thank you for subscribing!"});
     } else {
       setMessage({type:"error",message:"Please enter a valid email address"});
     }
